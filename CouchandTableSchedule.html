@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>     
+    <style>
+        @font-face {
+            font-family: "Gilroy";
+            src: url("Gilroy-Regular.ttf") format("opentype");
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url("Gilroy-Bold.ttf") format("opentype");
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url("Gilroy-RegularItalic.ttf") format("opentype");
+            font-style: italic;
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url("Gilroy-BoldItalic.ttf") format("opentype");
+            font-style: italic;
+            font-weight: bold;
+        }
+        body{
+            background-image: url("images/static\ background.png");
+            background-size: cover;
+        }
+        .banner{
+            width: 685px;
+            height: 131px;
+            border-radius:8px;
+            background-color: white;
+            margin: auto;
+            margin-bottom: 24px;;
+            color: #333333;
+        }
+        .banner img{
+            float: left;
+            border-radius: 8px 0px 0px 8px;
+            width: 131px;
+        }
+        h1{
+            font-size: 36px;
+            font-family: Gilroy;
+            padding-top:24px;
+            margin: 24px 0px 0px 150px;;
+        }
+        .smallh1{
+            font-size: 16px;
+            display: block;
+        }
+        .subheader{
+            margin-left: 150px;
+            font-size: 16px;
+            font-family: Gilroy;
+        }
+        .columns{
+            display: flex;
+            justify-content: center;flex-wrap: wrap;
+        }
+        .column{
+            max-width: 700px;;
+        }
+        .segment {
+            max-width: 684px;
+            height: 90px;
+            font-family: "Gilroy";
+            color: #333333;
+            padding-left: 24px;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            margin-top: 10px;
+            display: block;
+            position: relative;
+        }
+        .segmentImage{
+            height: 83px;
+            width: 70px;
+            float: left;
+        }
+        .segmentInfo{
+            max-width: 555px;
+            min-height: 84px;
+            margin-left: 69PX;
+            padding-left: 16px;
+            background: white;
+            border-radius: 0 8px 8px 0;
+        }
+        .segmentName{
+            padding-top:8px;
+            font-size: 36px;
+            font-weight: bold;
+            /* to override h2 defaults */
+            margin: 0;
+        }
+        .segmentDescription{
+            font-family: Gilroy;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+            padding-bottom: 8px;
+        }
+        .segmentCategory {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-position: right;
+            color: white;
+            width: 163px;
+            height: 39px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+            line-height: 38px;
+            padding-right: 16px;
+        }
+        .segmentCategory.night{
+            background: url("images/Game Pics/bannerLate.png") no-repeat;
+            background-position: right;
+        }
+        .segmentCategory.fashion{
+            background: url("images/Game Pics/bannerAM.png") no-repeat;
+            background-position: right;
+        }
+        .segmentCategory.tabletop{
+            background: url("images/Game Pics/bannerTabletop.png") no-repeat;
+            background-position: right;
+        }
+        .segmentCategory.speedrun{
+            background: url("images/Game Pics/bannerSpeedrun.png") no-repeat;
+            background-position: right;
+        }
+        .segmentCategory.chaos{
+            background: url("images/Game Pics/bannerChaos.png") no-repeat;
+            background-position: right;
+        }
+        a.name, a.name:visited{
+            font-weight: 800;
+            color: #6054AA;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body{
+                margin:0px;
+            }
+            .banner{
+                width: 100%;
+                border-radius: 0px;;
+            }
+            .banner img{
+                border-radius: 0px;;
+            }
+            .banner h1{
+                font-size: 28px;
+                margin-top: 0;
+                padding-top:16px;
+            }
+            .segmentCategory {
+                display: none;
+            }
+            .segmentImage img{
+                clip-path: circle(30px at center);
+            }
+            .segmentInfo{
+                margin-left: 0px;
+                border-radius: 8px;
+            }
+            .segment{
+                width: 100%;
+                height: auto;
+                padding:0;
+                margin-bottom: 24px;
+            }
+            .columns   {
+                display: block;
+                margin:8px
+            }
+        }
+    </style>    
+</head>
+    <body>
+        <div class="banner">
+            <img src="images/ctlogo.png" alt="">
+            <h1>
+                <span class="smallh1">The Couch and Table Presents</span>
+                Extra Life, November 6th 2021
+            </h1>
+            <div class="subheader">
+                Live all day at 
+                <a href="http://twitch.tv/thecouchandtable" target="_blank" class="name"> thecouchandtable</a>
+            </div>
+        </div>
+    <div class="columns">
+        <div class="column">
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/pumpkin.png" alt="">
+                    </div>
+                    <div class="segmentCategory night">
+                        LATE NIGHT 
+                    </div>
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Kickoff
+                        </h2>
+                        <div class="segmentDescription">
+                            MIDNIGHT - About Extra Life (and pumpkins) with <a href="http://twitch.tv/yaymittens" target="_blank" class="name"> Matt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/daylight.png" alt="">
+                    </div>
+                    <div class="segmentCategory night">
+                        LATE NIGHT 
+                    </div>
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Dead by Daylight
+                        </h2>
+                        <div class="segmentDescription">
+                            12:30AM - Spooky hunts with  <a href="http://twitch.tv/DizzyWingman" target="_blank" class="name"> DizzyWingman</a> and friends
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/hots.png" alt="">
+                    </div>
+                    <div class="segmentCategory night">
+                        LATE NIGHT 
+                    </div>
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Heroes of the Storm
+                        </h2>
+                        <div class="segmentDescription">
+                            1:30AM - With Team Brick House
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/journey.png" alt="">
+                    </div>
+                    <div class="segmentCategory night">
+                        LATE NIGHT 
+                    </div>
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Journey
+                        </h2>
+                        <div class="segmentDescription">
+                            3:00AM - Full Playthrough with
+                            <a href="http://twitch.tv/knightsofryn" target="_blank" class="name"> knightsofryn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/portal.png" alt="">
+                    </div>
+                    <div class="segmentCategory night">
+                        LATE NIGHT 
+                    </div>
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Portal 2 Co-op
+                        </h2>
+                        <div class="segmentDescription">
+                            6:00AM - Casual play with LittleSull and
+                            <a href="http://twitch.tv/theprinceofnone" target="_blank"class="name"> theprinceofnone</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/ac.png" alt="">
+                    </div>
+                    <div class="segmentCategory fashion">
+                        AM FASHION 
+                    </div>
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            New Horizons
+                        </h2>
+                        <div class="segmentDescription">
+                            9:00AM - Fashion showcase with 
+                            <a href="http://twitch.tv/sparklequeenofbwy" target="_blank"class="name"> sparklequeenofbwy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/hitman.png" alt="">
+                    </div>
+                    <div class="segmentCategory fashion">
+                        AM FASHION 
+                    </div>   
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Hitman 3
+                        </h2>
+                        <div class="segmentDescription">
+                            10:00AM - Elusive Target with  
+                            <a href="http://twitch.tv/yaymittens" target="_blank"class="name"> Matt</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/enoch.png" alt="">
+                    </div>
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Enoch’s Wake
+                        </h2>
+                        <div class="segmentCategory tabletop">
+                            Tabletop     
+                        </div>
+                        <div class="segmentDescription">
+                            11:00AM - A new tabletop RPG from  
+                            <a href="https://my.link.gallery/r-rook-studio" target="_blank"class="name"> R. Rook Studio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/mario.png" alt="">
+                    </div>
+                    <div class="segmentCategory speedrun">
+                        SPEEDRUN 
+                    </div>   
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Super Mario Odyssey
+                        </h2>
+                        <div class="segmentDescription">
+                            2:00PM - Any% Speedrun by 
+                            <a href="http://twitch.tv/taterplays" target="_blank"class="name"> taterplays</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/toree.png" alt="">
+                    </div>
+                    <div class="segmentCategory speedrun">
+                        SPEEDRUN 
+                    </div>   
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Toree 2
+                        </h2>
+                        <div class="segmentDescription">
+                            3:30PM - Any% Speedrun by 
+                            <a href="http://twitch.tv/bridgs_dev" target="_blank"class="name"> bridgs_dev</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/banjo.png" alt="">
+                    </div>
+                    <div class="segmentCategory speedrun">
+                        SPEEDRUN 
+                    </div>   
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Banjo-Kazooie
+                        </h2>
+                        <div class="segmentDescription">
+                            4:00PM - 100% by 
+                            <a href="http://twitch.tv/silverbanjoes" target="_blank"class="name"> silverbanjoes,</a>
+                            with <a href="http://twitch.tv/bewildebeest" target="_blank"class="name"> guest </a>
+                            <a href="http://twitch.tv/theprinceofnone" target="_blank"class="name"> commentary</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/bowser.png" alt="">
+                    </div>
+                    <div class="segmentCategory speedrun">
+                        SPEEDRUN 
+                    </div>   
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Incentive: Bowser’s Fury
+                        </h2>
+                        <div class="segmentDescription">
+                            If we hit 25 donations, any% speedrun by
+                            <a href="http://twitch.tv/taterplays" target="_blank"class="name"> taterplays</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="container">
+                <div class="segment">
+                    <div class="segmentImage">
+                        <img src="images/Game Pics/coop.png" alt="">
+                    </div>
+                    <div class="segmentCategory chaos">
+                        CHAOS 
+                    </div>   
+                    <div class="segmentInfo">
+                        <h2 class="segmentName">
+                            Couch Co-op Chaos
+                        </h2>
+                        <div class="segmentDescription">
+                            8:00PM - Just a bunch of games back to back
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </script>
+</html>
+ 
