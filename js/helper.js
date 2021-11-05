@@ -15,7 +15,7 @@ const KEY_DONATION_COUNT = "numDonations";
 var donationCountText;
 
 
-const IS_DEBUG = true;
+const IS_DEBUG = false;
 const WIDTH_ORIGINAL = 264;
 const HEIGHT_ORIGINAL = 110;
 const ANCHOR_POINT = { x: 1, y: 1 };    // Point to start drawing which avoids clipping of stroke
