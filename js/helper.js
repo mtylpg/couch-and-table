@@ -26,8 +26,8 @@ const GREEN = "#97C93D";
 const WHITE = "#FFFFFF";
 const GRAY = "#BCBEC0";
 const CLOCK_TIMER_INTERVAL = 1000;      // Frequency that the countdown should be refreshed, in ms
-const ACTION_TIMER_INTERVAL = 60000;    // Frequency that a new action should be taken, in ms
-const DONOR_TIMER_INTERVAL = 10000;     // Length of time a new donation is shown, in ms
+const ACTION_TIMER_INTERVAL = 120000;    // Frequency that a new action should be taken, in ms
+const DONOR_TIMER_INTERVAL = 15000;     // Length of time a new donation is shown, in ms
 const LOGO_PLAY_MARK = 60;              // Number of times the action item ticks before showing logos
 const DONOR_AMOUNT_POINT_Y = 40;
 const DONOR_AMOUNT_FONT_SIZE = 36;
@@ -545,6 +545,7 @@ function showNewDonor(donorName, donorAmount, donorMessage, donorAvatar, donorCr
     //     : donorName;
 
     // updateDonorGroup(donorMessage);
+    playSounds();
 
     $('#donorName').text(donorName)
     log("showing donorslide ")
@@ -559,7 +560,6 @@ function showNewDonor(donorName, donorAmount, donorMessage, donorAvatar, donorCr
     // $("#donorSlide").show();
 
 
-    playSounds();
 
     if (selectedVoice) {
         setTimeout(function () {
@@ -740,13 +740,20 @@ function onDonorInfoSuccess(res) {
 }
 
 function playSounds() {
-    for (i = 0; i < soundObjects.length; i++) {
-        soundObject = soundObjects[i];
-        soundObject.load();
-        soundObject.play()
-           .then(result => {})
-           .catch(error => {});
-    }
+    // modified by c+t for randomness
+
+    soundObject = soundObjects[Math.floor(Math.random()*soundObjects.length)];
+    soundObject.load();
+    soundObject.play()
+       .then(result => {})
+       .catch(error => {});
+    // for (i = 0; i < soundObjects.length; i++) {
+    //     soundObject = soundObjects[i];
+    //     soundObject.load();
+    //     soundObject.play()
+    //        .then(result => {})
+    //        .catch(error => {});
+    // }
 }
 
 function speakText(text) {
