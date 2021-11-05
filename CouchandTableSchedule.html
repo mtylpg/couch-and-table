@@ -60,7 +60,11 @@
         }
         .column{
             display: flex;
-            justify-content: center; flex-wrap: wrap;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-height: 900px;
+            flex-direction: column;
+           align-content: center
         }
         .segment {
             max-width: 684px;
@@ -74,6 +78,10 @@
             margin-top: 10px;
             display: block;
             position: relative;
+        }
+        .container:nth-child(n+6){
+            border-left: 4px solid rgba(255,255,255,.5);
+            margin-left: -4px;
         }
         .segmentImage{
             height: 83px;
@@ -177,6 +185,16 @@
                 display: block;
                 margin:8px
             }
+        } 
+        @media only screen and (max-width: 1400px) {
+            .container:nth-child(n+6){
+                border-left: none;
+                margin-left: none;
+            }
+            .column{
+                max-height: none;
+
+            }
         }
     </style>    
 </head>
@@ -187,28 +205,32 @@
                 <span class="smallh1">The Couch and Table Presents</span>
                 Extra Life, November 6th 2021
             </h1>
+            <div class="subheader">
+                Streaming to raise money for Cohen Children’s Medican Center in Queens, New York
+                <a href="http://twitch.tv/thecouchandtable" target="_blank" class="name"> thecouchandtable</a>
+            </div>
         </div>
     <div class="columns">
-        <div class="column">
-            <div class="container">
-                <div class="segment">
-                    <div class="segmentImage">
-                        <img src="images/Game Pics/couch.png" alt="">
-                    </div>
-                    <div class="segmentCategory chaos">
-                        ALL DAY 
-                    </div>
-                    <div class="segmentInfo">
-                        <h2 class="segmentName">
-                            Live at
-                            <a href="http://twitch.tv/thecouchandtable" target="_blank" class="name"> thecouchandtable</a>
-                        </h2>
-                        <div class="segmentDescription">
-                            Donate at <a href="http://bit.ly/text21" target="_blank" class="name">bit.ly/text21</a>!
-                        </div>
+        <div class="container" style="width:100%">
+            <div class="segment" style="margin:auto">
+                <div class="segmentImage">
+                    <img src="images/Game Pics/couch.png" alt="">
+                </div>
+                <div class="segmentCategory chaos">
+                    ALL DAY 
+                </div>
+                <div class="segmentInfo">
+                    <h2 class="segmentName">
+                        Live at
+                        <a href="http://twitch.tv/thecouchandtable" target="_blank" class="name"> thecouchandtable</a>
+                    </h2>
+                    <div class="segmentDescription">
+                        Donate at <a href="http://bit.ly/text21" target="_blank" class="name">bit.ly/text21</a>!
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="column">
             <div class="container">
                 <div class="segment">
                     <div class="segmentImage">
