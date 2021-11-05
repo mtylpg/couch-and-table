@@ -657,7 +657,7 @@ function makeRequest(url, onSuccess, onError) {
         url: url,
         type: 'GET',
         data: '',
-        dataType: 'json',
+        dataType: 'jsonp',
         cache: false,
         success: function (res) {
             onSuccess(res);
