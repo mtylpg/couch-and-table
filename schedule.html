@@ -2,23 +2,23 @@
 <html>
 <head>     
     <style>
-        @font-face {
+       @font-face {
             font-family: "Gilroy";
-            src: url("Gilroy-Regular.ttf") format("opentype");
+            src: url("fonts/Gilroy-Regular.otf") format("opentype");
         }
         @font-face {
             font-family: "Gilroy";
-            src: url("Gilroy-Bold.ttf") format("opentype");
+            src: url("fonts/Gilroy-Bold.otf") format("opentype");
             font-weight: bold;
         }
         @font-face {
             font-family: "Gilroy";
-            src: url("Gilroy-RegularItalic.ttf") format("opentype");
+            src: url("fonts/Gilroy-RegularItalic.otf") format("opentype");
             font-style: italic;
         }
         @font-face {
             font-family: "Gilroy";
-            src: url("Gilroy-BoldItalic.ttf") format("opentype");
+            src: url("fonts/Gilroy-BoldItalic.otf") format("opentype");
             font-style: italic;
             font-weight: bold;
         }
@@ -60,7 +60,11 @@
         }
         .column{
             display: flex;
-            justify-content: center; flex-wrap: wrap;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-height: 900px;
+            flex-direction: column;
+           align-content: center
         }
         .segment {
             max-width: 684px;
@@ -74,6 +78,10 @@
             margin-top: 10px;
             display: block;
             position: relative;
+        }
+        .container:nth-child(n+7){
+            border-left: 4px solid rgba(255,255,255,.5);
+            margin-left: -4px;
         }
         .segmentImage{
             height: 83px;
@@ -177,6 +185,16 @@
                 display: block;
                 margin:8px
             }
+        } 
+        @media only screen and (max-width: 1400px) {
+            .container:nth-child(n+7){
+                border-left: none;
+                margin-left: none;
+            }
+            .column{
+                max-height: none;
+
+            }
         }
     </style>    
 </head>
@@ -188,11 +206,29 @@
                 Extra Life, November 6th 2021
             </h1>
             <div class="subheader">
-                Live all day at 
-                <a href="http://twitch.tv/thecouchandtable" target="_blank" class="name"> thecouchandtable</a>
+                Streaming to raise money for Cohen Children’s Medican Center
             </div>
         </div>
     <div class="columns">
+        <div class="container" style="width:100%">
+            <div class="segment" style="margin:auto">
+                <div class="segmentImage">
+                    <img src="images/Game Pics/couch.png" alt="">
+                </div>
+                <div class="segmentCategory chaos">
+                    ALL DAY 
+                </div>
+                <div class="segmentInfo">
+                    <h2 class="segmentName" style="font-size: 26px; line-height: 40px">
+                        Live at
+                        <a href="http://twitch.tv/thecouchandtable" target="_blank" class="name"> twitch.tv/ thecouchandtable</a>
+                    </h2>
+                    <div class="segmentDescription"style="font-size: 18px; line-height: 28px">
+                        Donate at <a href="http://bit.ly/text21" target="_blank" class="name">bit.ly/text21</a>!
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="column">
             <div class="container">
                 <div class="segment">
@@ -305,7 +341,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <!-- RIP hitman -->
+            <!-- <div class="container">
                 <div class="segment">
                     <div class="segmentImage">
                         <img src="images/Game Pics/hitman.png" alt="">
@@ -323,7 +360,7 @@
                         </div>
                     </div>    
                 </div>
-            </div>
+            </div> -->
         <!-- </div>
         <div class="column"> -->
             <div class="container">
@@ -339,7 +376,7 @@
                             Tabletop     
                         </div>
                         <div class="segmentDescription">
-                            11:00AM - A new tabletop RPG from  
+                            10:00AM - A new tabletop RPG from  
                             <a href="https://my.link.gallery/r-rook-studio" target="_blank"class="name"> R. Rook Studio</a>
                         </div>
                     </div>
@@ -398,7 +435,8 @@
                         <div class="segmentDescription">
                             4:00PM - 100% by 
                             <a href="http://twitch.tv/silverbanjoes" target="_blank"class="name"> silverbanjoes,</a>
-                            with <a href="http://twitch.tv/bewildebeest" target="_blank"class="name"> guest</a>  <a href="http://twitch.tv/theprinceofnone" target="_blank"class="name">commentary</a>
+                            with <a href="http://twitch.tv/bewildebeest" target="_blank"class="name"> guest </a>
+                            <a href="http://twitch.tv/theprinceofnone" target="_blank"class="name"> commentary</a>
                         </div>
                     </div>    
                 </div>
