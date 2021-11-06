@@ -1,5 +1,5 @@
 /*!
- * @license Extra Life Helper
+ * 
  * Visit https://github.com/breadweb/extralifehelper for documentation, updates and examples.
  *
  * Copyright (c) 2013-2021 Adam "Bread" Slesinger http://www.breadweb.net
