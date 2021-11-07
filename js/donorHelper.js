@@ -709,7 +709,7 @@ function onDonorInfoSuccess(res) {
         var time = new Date(res[i][KEY_CREATED_DATE]),
         h = time.getHours(), // 0-24 format
         m = time.getMinutes();
-        $("#donorList").append("<li>"+res[i][KEY_DISPLAY_NAME]+" <span class='time'> at "+h+":"+m+"</span></li>");
+        $("#donorList").append("<li>"+res[i][KEY_DISPLAY_NAME]+"<span class='time'>, $"+res[i][KEY_AMOUNT]+", "+h+":"+m+"</span></li>");
         // $("#donorList").preppend(res[i][KEY_DISPLAY_NAME]);
         // $("#donorList").preppend("</li>");
     }
