@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>     
+    <script type="text/javascript" src="js/helper.js"></script>
+    <script type="text/javascript">
+        // Extra Life Helper
+        // ============================================================================================
+        // For use details and use instructions, visit https://github.com/breadweb/extralife-helper
+        // For support or feature requests, visit https://discord.gg/aArewEc
+        // 
+        participantId = "";              // Set this to blank to run in team mode.
+        teamId = "56988";                           // Set this to blank to run in participant mode.
+        startDate = "11-06-2021";              // Set to your local Extra Life start date.
+        startTime = "10:00:00";                // Set to your local Extra Life start time.
+        helperTheme = "blue1";                 // Color theme: white1, gray1, blue1, or blue2.
+        helperBorder = "rounded";              // Border type: rounded, square, or none.
+        helperWidth = 540;                     // Width of the Helper, in pixels.
+        showDonationAlerts = true;             // Set to false to suppress donation alerts.
+        showGoal = true;                       // Set to false to only show amount raised on the
+        //                                     // main screen and not also your goal.
+        showYearMode = false;                  // An alternate display to support fundraising all
+        //                                     // year. The count down/up timer is hidden.        
+        donationSounds = "bike_bell.wav, boxing_bell.wav, desk_bell.wav, hoops_baby.wav, leopold.wav, set_you_free.wav";  // Set this to your custom set of sounds, separated  cash.mp3,kids.mp3
+        //                                     // by commas. Or set to "" to play no sounds.
+        donationMessageVoice = "";    // Set to US-male, US-female, UK-male, UK-female,
+        //                                     // FR-male, FR-female, ES-male, ES-female or set
+        //                                     // to "" to not read messages with text-to-speech.          
+        testDonationSeconds = 0;               // Number of seconds to show a test donation after
+        //                                     // the Helper loads. Set to 0 to disable.
+        volume = 100;                          // The volume for all sound effects and text-to-speech.
+        lang = "en-us";                        // Language to use for all text displayed in the
+        //                                     // Helper. Supported options are en-us for 
+        //                                     // English (United States), fr-ca for French (Canada),
+        //                                     // or es-419 for Spanish (Latin America)
+        // ============================================================================================
+
+        // If you would like additional things to happen when a new donation is 
+        // received, put them in this function.
+        function onNewDonation(donorName, donationAmount, message, avatarImageURL, createdOn)
+        {
+            // Your custom logic here.
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: "Gilroy";
+            src: url("fonts/Gilroy-Regular.otf") format("opentype");
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url("fonts/Gilroy-Bold.otf") format("opentype");
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url("fonts/Gilroy-RegularItalic.otf") format("opentype");
+            font-style: italic;
+        }
+        @font-face {
+            font-family: "Gilroy";
+            src: url("fonts/Gilroy-BoldItalic.otf") format("opentype");
+            font-style: italic;
+            font-weight: bold;
+        }
+        body{
+            margin: 0px;
+            background: none;
+        }
+        .error {
+            width: 500px;
+            height: 185px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        #donationTracker {
+            border-left: 24px solid #26C2EB; 
+            width: 244px;
+            height: 240px;
+            background: white;
+            position: relative;
+            overflow:hidden;
+        }
+        .trackerText{
+            text-align: center;
+            font-family: "Gilroy";
+            color: #333333;
+        }
+        .counter{
+            margin:auto;
+            /* margin-top:16px; */
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .sub-counter{
+            margin:auto;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .divider{
+            background: #1D4B6C;
+            width: 136px;
+            height: 8px;
+            margin: auto;
+            margin-bottom:8px;
+        }
+        .donorName{
+            overflow-wrap: break-word;
+            margin:auto;
+            font-weight: bold;
+            width: 244px;
+            font-size: 32px;
+            line-height: 36px;
+            height: 120px;
+        }
+        .donorText{
+            padding-top:40px;
+        }
+        #trackerSlide, #donorSlide{
+            position: absolute;
+        }
+    </style>    
+</head>
+<body>
+    <div id="donationTracker">
+        <div id="trackerSlide">
+            <img class="logo" alt="Extra Life - a program of Children's Miracle Network Hospitals" src="images/ExtraLife_logo_RGB.png">
+            <div class="divider"></div>
+            <div class="trackerText">
+                <div class="sub-counter" style="padding:16px, 16px;"> Welcome to !community day, play games with us!
+                </div>
+                <div class="counter">
+                    <!-- <span id="donationCountText">0</span>/<span id="donationTarget">100</span> -->
+                </div>
+                <div class="sub-counter">!discord</div>
+                <div class="sub-counter">!donate</div>
+            </div>
+        </div>
+        <div id="donorSlide" style="right:-244px; top:0px">
+            <div class="trackerText donorText">
+                <div class="sub-counter">Donation Recieved From</div>
+                <div class="donorName">
+                    <span id="donorName">yaymittens</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
